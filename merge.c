@@ -1,15 +1,10 @@
 #include <stdio.h>
-
-
-
-
 void mergeSort(int arr[],int left,int right);
 void merge(int arr[],int left,int mid,int right);
-
-
 int main() {
     int arr[100];
     int n;
+    int i;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
     printf("Enter %d elements:\n", n);
@@ -31,7 +26,7 @@ void mergeSort(int arr[],int left,int right) {
 
        
         mergeSort(arr,left,mid);
-        mergeSort(ar,mid+1,right);
+        mergeSort(arr,mid+1,right);
         merge(arr,left,mid,right);
     }
 }
